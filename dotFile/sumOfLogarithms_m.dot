@@ -1,0 +1,28 @@
+digraph "double sumOfLogarithms_m(java.lang.Double[])" {
+    label="double sumOfLogarithms_m(java.lang.Double[])";
+    node [shape=box];
+    "0" [style=filled,fillcolor=gray,label="r0 := @parameter0",];
+    "1" [label="d2 = 0.0",];
+    "0"->"1";
+    "2" [label="i1 = 0",];
+    "1"->"2";
+    "3" [label="label1: $i0 = lengthof r0",];
+    "2"->"3";
+    "4" [label="if i1 >= $i0 goto label2",];
+    "3"->"4";
+    "5" [label="$r1 = r0[i1]",];
+    "4"->"5";
+    "11" [style=filled,fillcolor=lightgray,label="label2: return d2",];
+    "4"->"11";
+    "6" [label="$d0 = $r1.doubleValue()",];
+    "5"->"6";
+    "7" [label="$d1 = java.lang.Math.log($d0)",];
+    "6"->"7";
+    "8" [label="d2 = d2 + $d1",];
+    "7"->"8";
+    "9" [label="i1 = i1 + 1",];
+    "8"->"9";
+    "10" [label="goto label1",];
+    "9"->"10";
+    "10"->"3";
+}
