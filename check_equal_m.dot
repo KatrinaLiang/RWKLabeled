@@ -1,0 +1,36 @@
+digraph "boolean check_equal_m(java.lang.Integer[],java.lang.Integer[])" {
+    label="boolean check_equal_m(java.lang.Integer[],java.lang.Integer[])";
+    node [shape=box];
+    "0" [style=filled,fillcolor=gray,label="r0 := @parameter0",];
+    "1" [label="r1 := @parameter1",];
+    "0"->"1";
+    "2" [label="$i1 = lengthof r0",];
+    "1"->"2";
+    "3" [label="$i0 = lengthof r1",];
+    "2"->"3";
+    "4" [label="if $i1 == $i0 goto label1",];
+    "3"->"4";
+    "5" [style=filled,fillcolor=lightgray,label="return 0",];
+    "4"->"5";
+    "6" [label="label1: i3 = 0",];
+    "4"->"6";
+    "7" [label="label2: $i2 = lengthof r0",];
+    "6"->"7";
+    "8" [label="if i3 >= $i2 goto label4",];
+    "7"->"8";
+    "9" [label="$r3 = r0[i3]",];
+    "8"->"9";
+    "15" [style=filled,fillcolor=lightgray,label="label4: return 1",];
+    "8"->"15";
+    "10" [label="$r2 = r1[i3]",];
+    "9"->"10";
+    "11" [label="if $r3 == $r2 goto label3",];
+    "10"->"11";
+    "12" [style=filled,fillcolor=lightgray,label="return 0",];
+    "11"->"12";
+    "13" [label="label3: i3 = i3 + 1",];
+    "11"->"13";
+    "14" [label="goto label2",];
+    "13"->"14";
+    "14"->"7";
+}
