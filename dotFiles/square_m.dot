@@ -1,0 +1,32 @@
+digraph "java.lang.Double[] square_m(java.lang.Double[])" {
+    label="java.lang.Double[] square_m(java.lang.Double[])";
+    node [shape=box];
+    "0" [style=filled,fillcolor=gray,label="r0 := @parameter0",];
+    "1" [label="i1 = 0",];
+    "0"->"1";
+    "2" [label="label1: $i0 = lengthof r0",];
+    "1"->"2";
+    "3" [label="if i1 >= $i0 goto label2",];
+    "2"->"3";
+    "4" [label="$r1 = r0[i1]",];
+    "3"->"4";
+    "13" [style=filled,fillcolor=lightgray,label="label2: return r0",];
+    "3"->"13";
+    "5" [label="$d0 = $r1.doubleValue()",];
+    "4"->"5";
+    "6" [label="$r2 = r0[i1]",];
+    "5"->"6";
+    "7" [label="$d1 = $r2.doubleValue()",];
+    "6"->"7";
+    "8" [label="$d2 = $d0 * $d1",];
+    "7"->"8";
+    "9" [label="$r3 = java.lang.Double.valueOf($d2)",];
+    "8"->"9";
+    "10" [label="r0[i1] = $r3",];
+    "9"->"10";
+    "11" [label="i1 = i1 + 1",];
+    "10"->"11";
+    "12" [label="goto label1",];
+    "11"->"12";
+    "12"->"2";
+}
